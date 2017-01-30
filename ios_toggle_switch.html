@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>iOS toggle switch</title>
+	</head>
+	<body>
+
+<style>
+	*, html, body {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	
+	.ios_toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px solid #F00;
+		transition: all 200ms ease-in-out;
+	}
+	
+	.input {display: none;}
+	
+	.io {
+		display: none;
+		background: #000;
+		width: 100px;
+		height: 100px;
+	}
+	
+	#toggle:checked ~ .ios_toggle {left: 30px;}
+	
+	#toggle:checked .io {display: block;}
+</style>
+		
+		<label for="toggle" class="label">
+			<div style="width: 60px; height: 30px; border: 1px solid #000; border-radius: 30px;">
+				<input type="checkbox" name="toggle" id="toggle" class="input">
+				<div class="ios_toggle"></div>
+			</div>
+		</label>
+		
+		<div class="io"></div>
+		
+	</body>
+</html>
